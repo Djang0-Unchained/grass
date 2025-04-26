@@ -18,7 +18,7 @@ EMAIL_FOLDER = '' # folder where mails comes (example: SPAM INBOX JUNK etc.)
 IMAP_DOMAIN = ""  # imap server domain (example: imap.firstmail.ltd for firstmail)
 
 #########################################
-CLAIM_REWARDS_ONLY = False  # claim tiers rewards only (https://app.getgrass.io/dashboard/referral-program)
+CLAIM_REWARDS_ONLY = False  # claim tiers rewards only (https://app.grass.io/dashboard/referral-program)
 
 STOP_ACCOUNTS_WHEN_SITE_IS_DOWN = True  # stop account for 20 minutes, to reduce proxy traffic usage
 CHECK_POINTS = True  # show point for each account every nearly 10 minutes
@@ -47,7 +47,7 @@ CAPTCHA_PARAMS = {
     "captcha_type": "v2",
     "invisible_captcha": False,
     "sitekey": "6LeeT-0pAAAAAFJ5JnCpNcbYCBcAerNHlkK4nm6y",
-    "captcha_url": "https://app.getgrass.io/register"
+    "captcha_url": "https://app.grass.io/register"
 }
 
 ########################################

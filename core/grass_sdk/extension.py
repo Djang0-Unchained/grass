@@ -62,7 +62,7 @@ class GrassWs:
 
         try:
             response = await self.session.post(
-                'https://director.getgrass.io/checkin',
+                'https://director.grass.io/checkin',
                 json=message,
                 headers=headers,
                 proxy=self.proxy,

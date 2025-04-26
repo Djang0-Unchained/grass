@@ -5,7 +5,7 @@ Discover the latest `<crypto/>` moves in my Telegram Channel:
 
 [![My Channel 🥰](https://img.shields.io/badge/Web3_Enjoyer_|_Subscribe_🥰-0A66C2?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/web3_enjoyer_club) 
 
-Cheapest [proxies and servers](https://teletype.in/@web3enjoyer/4a2G9NuHssy) which fits for  on [grass.io](https://app.getgrass.io/register/?referralCode=erxggzon61FWrJ9).
+Cheapest [proxies and servers](https://teletype.in/@web3enjoyer/4a2G9NuHssy) which fits for  on [grass.io](https://app.grass.io/register/?referralCode=erxggzon61FWrJ9).
 
 Also you can use for free [Nodepay+ bot](https://github.com/MsLolita/Nodepay_plus) with ui.
 

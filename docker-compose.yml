@@ -12,7 +12,7 @@ services:
       - 8080:80
     environment:
       - MIN_PROXY_SCORE=50
-      - CLAIM_REWARDS_ONLY=False                # claim tiers rewards only (https://app.getgrass.io/dashboard/referral-program)
+      - CLAIM_REWARDS_ONLY=False                # claim tiers rewards only (https://app.grass.io/dashboard/referral-program)
       - REGISTER_ACCOUNT_ONLY=True
       - REGISTER_DELAY="(3, 7)"
       - THREADS=2                               # for register account / claim rewards mode only

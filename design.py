@@ -701,7 +701,7 @@ class Ui_MainWindow(object):
         self.checkBox_RarelyShowLogs.setText(QCoreApplication.translate("MainWindow", u"Rarely Show Logs", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"Farm", None))
 #if QT_CONFIG(tooltip)
-        self.checkBox_ClaimRewardOnly.setToolTip(QCoreApplication.translate("MainWindow", u"claim tiers rewards only (https://app.getgrass.io/dashboard/referral-program)", None))
+        self.checkBox_ClaimRewardOnly.setToolTip(QCoreApplication.translate("MainWindow", u"claim tiers rewards only (https://app.grass.io/dashboard/referral-program)", None))
 #endif // QT_CONFIG(tooltip)
         self.checkBox_ClaimRewardOnly.setText(QCoreApplication.translate("MainWindow", u"Claim Reward ONLY", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Rewards", None))

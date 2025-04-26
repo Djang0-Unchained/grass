@@ -47,7 +47,7 @@ class GrassRest(BaseClient):
         return await handler(self.create_account)()
 
     async def create_account(self):
-        url = 'https://api.getgrass.io/register'
+        url = 'https://api.grass.io/register'
 
         params = {
             'app': 'dashboard',
@@ -84,7 +84,7 @@ class GrassRest(BaseClient):
            before_sleep=lambda retry_state, **kwargs: logger.info(f"Retrying... {retry_state.outcome.exception()}"),
            reraise=True)
     async def retrieve_user(self):
-        url = 'https://api.getgrass.io/retrieveUser'
+        url = 'https://api.grass.io/retrieveUser'
 
         response = await self.session.get(url, headers=self.website_headers, proxy=self.proxy)
 
@@ -106,7 +106,7 @@ class GrassRest(BaseClient):
         return True
 
     async def claim_reward_for_tier(self):
-        url = 'https://api.getgrass.io/claimReward'
+        url = 'https://api.grass.io/claimReward'
 
         response = await self.session.post(url, headers=self.website_headers, proxy=self.proxy)
 
@@ -125,7 +125,7 @@ class GrassRest(BaseClient):
         return await handler(self.get_points)()
 
     async def get_points(self):
-        url = 'https://api.getgrass.io/users/earnings/epochs'
+        url = 'https://api.grass.io/users/earnings/epochs'
 
         response = await self.session.get(url, headers=self.website_headers, proxy=self.proxy)
 
@@ -156,7 +156,7 @@ class GrassRest(BaseClient):
         return await handler(self.login)()
 
     async def login(self):
-        url = 'https://api.getgrass.io/login'
+        url = 'https://api.grass.io/login'
 
         json_data = {
             'password': self.password,
@@ -216,7 +216,7 @@ class GrassRest(BaseClient):
                                                                    f"Continue..."),
         )
         async def approve_email_retry():
-            url = f'https://api.getgrass.io/{endpoint}'
+            url = f'https://api.grass.io/{endpoint}'
 
             json_data = {
                 'email': self.email,
@@ -246,7 +246,7 @@ class GrassRest(BaseClient):
             headers = self.website_headers.copy()
             headers['Authorization'] = verify_token
 
-            url = f'https://api.getgrass.io/{endpoint}'
+            url = f'https://api.grass.io/{endpoint}'
             response = await self.session.post(
                 url, headers=headers, proxy=self.proxy
             )
@@ -260,7 +260,7 @@ class GrassRest(BaseClient):
     def sign_message(self, private_key: str, timestamp: int):
         keypair = Keypair.from_bytes(base58.b58decode(private_key))
 
-        msg = f"""By signing this message you are binding this wallet to all activities associated to your Grass account and agree to our Terms and Conditions (https://www.getgrass.io/terms-and-conditions) and Privacy Policy (https://www.getgrass.io/privacy-policy).
+        msg = f"""By signing this message you are binding this wallet to all activities associated to your Grass account and agree to our Terms and Conditions (https://www.grass.io/terms-and-conditions) and Privacy Policy (https://www.grass.io/privacy-policy).
 
 Nonce: {timestamp}"""
 
@@ -279,7 +279,7 @@ Nonce: {timestamp}"""
                                                                    f"Continue..."),
         )
         async def linking_wallet():
-            url = 'https://api.getgrass.io/verifySignedMessage'
+            url = 'https://api.grass.io/verifySignedMessage'
 
             timestamp = int(time.time())
             signatures = self.sign_message(private_key, timestamp)
@@ -333,13 +333,13 @@ Nonce: {timestamp}"""
         return res_json['data']['devices'][0]['device_id']
 
     async def get_user_info(self):
-        url = 'https://api.getgrass.io/users/dash'
+        url = 'https://api.grass.io/users/dash'
 
         response = await self.session.get(url, headers=self.website_headers, proxy=self.proxy)
         return await response.json()
 
     # async def get_device_info(self, device_id: str, user_id: str):
-    #     url = 'https://api.getgrass.io/extension/device'
+    #     url = 'https://api.grass.io/extension/device'
     #
     #     params = {
     #         'device_id': device_id,
@@ -350,13 +350,13 @@ Nonce: {timestamp}"""
     #     return await response.json()
 
     async def get_devices_info(self):
-        url = 'https://api.getgrass.io/activeIps'  # /extension/user-score /activeDevices
+        url = 'https://api.grass.io/activeIps'  # /extension/user-score /activeDevices
 
         response = await self.session.get(url, headers=self.website_headers, proxy=self.proxy)
         return await response.json()
 
     async def get_device_info(self, device_id: str):
-        url = f"https://api.getgrass.io/retrieveDevice?input=%7B%22deviceId%22:%22{device_id}%22%7D"
+        url = f"https://api.grass.io/retrieveDevice?input=%7B%22deviceId%22:%22{device_id}%22%7D"
         response = await self.session.get(url, headers=self.website_headers, proxy=self.proxy)
         return await response.json()
 
@@ -397,7 +397,7 @@ Nonce: {timestamp}"""
                      if device['ipAddress'] == self.ip), None)
 
     async def get_proxy_score_via_devices(self):
-        url = 'https://api.getgrass.io/users/devices'
+        url = 'https://api.grass.io/users/devices'
 
         response = await self.session.get(url, headers=self.website_headers, proxy=self.proxy)
 
